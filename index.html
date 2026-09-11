@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="tr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EBYÜ Kampüs · KVKK Aydınlatma Metni</title>
+<meta name="description" content="EBYÜ Kampüs mobil uygulaması kişisel verilerin korunması aydınlatma metni — Türkçe, English, العربية">
+<link rel="icon" href="seal.svg" type="image/svg+xml">
+<style>
+  :root {
+    --navy: #001C54; --navy-2: #0B2A6B; --gold: #D0A53D; --gold-ink: #8A6A18;
+    --ink: #14213D; --muted: #56617A; --line: #E3E7EF; --bg: #F6F7FB; --card: #FFFFFF;
+    --radius: 16px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #E9EDF5; --muted: #A7B0C3; --line: #26324D; --bg: #0B1226; --card: #111A33; --gold-ink: #E6C97A;
+    }
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, "Noto Sans", "Noto Naskh Arabic", Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+  header.hero {
+    background: radial-gradient(1200px 400px at 85% -10%, rgba(208,165,61,.28), transparent 60%), linear-gradient(160deg, var(--navy), var(--navy-2));
+    color: #fff; padding: 28px 20px 64px;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  .top { display: flex; align-items: center; gap: 14px; justify-content: space-between; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .2px; }
+  .brand img { width: 44px; height: 44px; }
+  .lang { display: inline-flex; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); border-radius: 999px; padding: 4px; }
+  .lang button {
+    appearance: none; border: 0; background: transparent; color: #fff; font: inherit; font-size: 14px; font-weight: 600;
+    padding: 7px 14px; border-radius: 999px; cursor: pointer; min-height: 36px;
+  }
+  .lang button[aria-pressed="true"] { background: #fff; color: var(--navy); }
+  .lang button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  h1 { font-size: clamp(26px, 4.4vw, 40px); line-height: 1.15; margin: 34px 0 8px; font-weight: 800; }
+  .sub { color: rgba(255,255,255,.82); margin: 0; font-size: 15px; }
+  main { margin-top: -40px; padding: 0 20px 56px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 22px; margin-bottom: 16px; box-shadow: 0 10px 30px rgba(0,28,84,.06); }
+  .tldr { border-top: 4px solid var(--gold); }
+  .tldr h2 { margin-top: 0; }
+  .tldr ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .tldr li { display: flex; gap: 10px; align-items: flex-start; background: var(--bg); border-radius: 12px; padding: 12px 14px; }
+  .tldr li::before { content: "✓"; color: var(--gold-ink); font-weight: 800; }
+  h2 { font-size: 20px; margin: 0 0 10px; line-height: 1.3; }
+  h2 .n { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 9px; background: var(--navy); color: #fff; font-size: 14px; margin-inline-end: 10px; vertical-align: 2px; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) h2 .n { background: var(--gold); color: var(--navy); } }
+  p { margin: 0 0 10px; }
+  ul.list { margin: 0; padding-inline-start: 20px; }
+  ul.list li { margin: 4px 0; }
+  .meta { color: var(--muted); font-size: 14px; }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .toc a { display: inline-block; padding: 6px 12px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); text-decoration: none; font-size: 14px; }
+  .table { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 15px; }
+  th, td { text-align: start; padding: 11px 14px; vertical-align: top; border-bottom: 1px solid var(--line); }
+  th { background: var(--bg); font-size: 13px; text-transform: none; color: var(--muted); font-weight: 700; }
+  tr:last-child td { border-bottom: 0; }
+  .contact { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 8px; }
+  .contact div { background: var(--bg); border-radius: 12px; padding: 12px 14px; }
+  .contact b { display: block; font-size: 13px; color: var(--muted); font-weight: 700; }
+  .note { border-inline-start: 4px solid var(--gold); background: var(--bg); padding: 12px 14px; border-radius: 10px; margin-top: 10px; }
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 10px 20px 40px; }
+  [dir="rtl"] body { font-size: 17px; }
+  @media print { header.hero { background: #fff; color: #000; padding-bottom: 10px; } .lang, .toc { display: none; } main { margin-top: 0; } .card { box-shadow: none; break-inside: avoid; } }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <div class="brand"><img src="seal.svg" alt="" width="44" height="44"><span>EBYÜ Kampüs</span></div>
+      <div class="lang" role="group" aria-label="Dil / Language / اللغة">
+        <button type="button" data-set="tr" aria-pressed="true">Türkçe</button>
+        <button type="button" data-set="en" aria-pressed="false">English</button>
+        <button type="button" data-set="ar" aria-pressed="false">العربية</button>
+      </div>
+    </div>
+    <div data-lang="tr"><h1>Kişisel Verilerin Korunması Aydınlatma Metni</h1><p class="sub">EBYÜ Kampüs mobil uygulaması · 6698 sayılı KVKK md. 10</p></div>
+    <div data-lang="en" hidden><h1>Personal Data Protection Notice</h1><p class="sub">EBYÜ Kampüs mobile app · Article 10 of Law No. 6698 (KVKK)</p></div>
+    <div data-lang="ar" hidden><h1>إشعار حماية البيانات الشخصية</h1><p class="sub">تطبيق EBYÜ Kampüs · المادة 10 من القانون رقم 6698</p></div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ═════════════════════════════ TÜRKÇE ═════════════════════════════ -->
+<article data-lang="tr">
+  <section class="card tldr">
+    <h2>Kısaca</h2>
+    <ul>
+      <li>Üniversite e-postanla giriş yaparsın; şifre istemeyiz, saklamayız.</li>
+      <li>Verilerin Türkiye'deki sunucularda barındırılır.</li>
+      <li>Konumunu, rehberini ya da mikrofonunu kullanmayız; reklam ve üçüncü taraf takip aracı yoktur.</li>
+      <li>Profil fotoğrafı, ad ve öğrenci numarası isteğe bağlıdır.</li>
+      <li>Hesabını uygulamadan istediğin an silebilirsin.</li>
+      <li>KVKK md. 11'deki haklarını her zaman kullanabilirsin.</li>
+    </ul>
+  </section>
+
+  <nav class="card" aria-label="İçindekiler">
+    <ul class="toc">
+      <li><a href="#tr-1">Veri sorumlusu</a></li><li><a href="#tr-2">İşlenen veriler</a></li><li><a href="#tr-3">Amaçlar</a></li>
+      <li><a href="#tr-4">Hukuki sebepler</a></li><li><a href="#tr-5">Aktarım</a></li><li><a href="#tr-6">Saklama</a></li>
+      <li><a href="#tr-7">Haklarınız</a></li><li><a href="#tr-8">Başvuru</a></li>
+    </ul>
+  </nav>
+
+  <section class="card" id="tr-1">
+    <h2><span class="n">1</span>Veri sorumlusu</h2>
+    <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, EBYÜ Kampüs uygulamasında işlenen kişisel verilerin veri sorumlusu <b>Erzincan Binali Yıldırım Üniversitesi Rektörlüğü</b>'dür.</p>
+    <div class="contact">
+      <div><b>Adres</b>Yalnızbağ Yerleşkesi, 24002 Erzincan</div>
+      <div><b>KEP</b>erzincanunv@hs02.kep.tr</div>
+      <div><b>E-posta</b><a href="mailto:rektorluk@erzincan.edu.tr">rektorluk@erzincan.edu.tr</a></div>
+      <div><b>Telefon</b><a href="tel:4448024">444 8 024</a></div>
+    </div>
+  </section>
+
+  <section class="card" id="tr-2">
+    <h2><span class="n">2</span>Hangi kişisel verileri işliyoruz?</h2>
+    <div class="table"><table>
+      <thead><tr><th>Veri kategorisi</th><th>Veriler</th><th>Ne zaman</th></tr></thead>
+      <tbody>
+        <tr><td>Kimlik ve iletişim</td><td>Üniversite e-posta adresi; isteğe bağlı ad-soyad ve takma ad</td><td>Giriş ve profil</td></tr>
+        <tr><td>Öğrenim bilgisi</td><td>Fakülte, bölüm, sınıf; isteğe bağlı öğrenci numarası</td><td>Profili doldurduğunda</td></tr>
+        <tr><td>Görsel veri</td><td>İsteğe bağlı profil fotoğrafı</td><td>Fotoğraf yüklediğinde</td></tr>
+        <tr><td>İşlem güvenliği</td><td>Tek kullanımlık giriş kodunun şifrelenmiş özeti, oturum anahtarları, cihaz kimliği, platform ve uygulama sürümü, bildirim anahtarı, IP adresi ve erişim kayıtları</td><td>Uygulamayı kullandığında</td></tr>
+        <tr><td>Talep ve geri bildirim</td><td>Talep, şikâyet ve önerinin türü, konusu, metni, seçtiğin birim ve verilen yanıt</td><td>Talep gönderdiğinde</td></tr>
+        <tr><td>Etkinlik</td><td>Etkinlik kaydı, bilet kodu, yoklama zamanı; varsa anket yanıtı ve katılım belgesi numarası</td><td>Etkinliğe kaydolduğunda</td></tr>
+        <tr><td>Tercihler ve kullanım</td><td>Dil, tema ve bildirim tercihleri; yemek menüsü oyları ve yemekhane yoğunluk bildirimleri</td><td>İlgili özelliği kullandığında</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note"><b>Yalnızca cihazında kalanlar:</b> ders programın, okuduğun rehber bölümleri ve seçtiğin otobüs durağı sunucuya gönderilmez.<br><b>İşlemediklerimiz:</b> konum, rehber, mikrofon, sağlık verisi ve reklam kimliği.</p>
+    <p class="meta">Veriler, uygulama ve yönetim paneli aracılığıyla elektronik ortamda; senin girdiğin bilgilerden ve kullanım sırasında otomatik olarak toplanır.</p>
+  </section>
+
+  <section class="card" id="tr-3">
+    <h2><span class="n">3</span>İşleme amaçları</h2>
+    <ul class="list">
+      <li>Üniversite e-postasıyla kimliğin doğrulanması ve hesabın güvenliği,</li>
+      <li>Yemek menüsü, akademik takvim, duyuru ve etkinliklerin fakültene göre sunulması,</li>
+      <li>Talep, şikâyet ve önerilerin ilgili birime iletilmesi ve yanıtlanması,</li>
+      <li>Etkinlik kaydı, yoklama ve katılım belgesinin düzenlenmesi,</li>
+      <li>Duyuru ve hatırlatma bildirimlerinin gönderilmesi,</li>
+      <li>Bilgi güvenliğinin sağlanması, kötüye kullanımın önlenmesi ve hukuki yükümlülüklerin yerine getirilmesi,</li>
+      <li>Hizmet kalitesinin anonim ve toplu istatistiklerle iyileştirilmesi.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="tr-4">
+    <h2><span class="n">4</span>Hukuki sebepler</h2>
+    <ul class="list">
+      <li><b>KVKK md. 5/2 (a) ve (ç):</b> 2547 sayılı Yükseköğretim Kanunu kapsamında öğrencilere hizmet sunulması ve 5651 sayılı Kanun kapsamındaki erişim kaydı yükümlülükleri,</li>
+      <li><b>KVKK md. 5/2 (c):</b> uygulama hizmetinin kurulması ve ifası için doğrudan gerekli olması (giriş, talepler, etkinlik kaydı),</li>
+      <li><b>KVKK md. 5/2 (f):</b> temel hak ve özgürlüklerine zarar vermemek kaydıyla bilgi güvenliği ve hizmetin iyileştirilmesine yönelik meşru menfaat,</li>
+      <li><b>KVKK md. 5/1 — açık rıza:</b> isteğe bağlı profil fotoğrafı ile bildirimlerin gönderilmesi. Rızanı fotoğrafı kaldırarak ya da bildirim iznini cihaz ayarlarından kapatarak istediğin an geri alabilirsin.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="tr-5">
+    <h2><span class="n">5</span>Kişisel verilerin aktarılması</h2>
+    <ul class="list">
+      <li>Veriler Türkiye'de bulunan sunucularda barındırılır.</li>
+      <li>Taleplerin yalnızca ilgili üniversite birimi ve yetkili personel tarafından görülür.</li>
+      <li>Kanunen yetkili kamu kurum ve kuruluşlarına, yalnızca hukuki zorunluluk hâlinde aktarılır.</li>
+      <li>Bildirimler etkinleştirildiğinde, telefonuna bildirim ulaştırmak için cihazının bildirim anahtarı Google (Firebase Cloud Messaging) ve Apple (APNs) altyapısına iletilir. Bu hizmetlerin sunucuları yurt dışında olabilir; aktarım KVKK md. 9 kapsamında ve bildirim iznini verdiğinde yapılır.</li>
+      <li>Kişisel verilerin reklam veya pazarlama amacıyla hiçbir üçüncü kişiyle paylaşılmaz ve satılmaz.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="tr-6">
+    <h2><span class="n">6</span>Saklama süreleri</h2>
+    <ul class="list">
+      <li><b>Hesap bilgileri:</b> hesabın açık olduğu sürece. Hesabını sildiğinde e-posta, ad, takma ad, öğrenci numarası, bölüm, profil fotoğrafı ve bildirim anahtarı derhâl silinir; kalan kayıtlar anonimleştirilir.</li>
+      <li><b>Giriş kodu:</b> 5 dakika · <b>Oturum yenileme anahtarı:</b> en fazla 30 gün.</li>
+      <li><b>Uygulama içi bildirimler:</b> 90 gün.</li>
+      <li><b>Talepler, etkinlik kayıtları ve katılım belgeleri:</b> işlemin tamamlanması ve ilgili mevzuatta öngörülen süre boyunca; sonrasında silinir veya anonimleştirilir.</li>
+      <li><b>Erişim kayıtları:</b> 5651 sayılı Kanun ve ilgili mevzuatta öngörülen süre boyunca.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="tr-7">
+    <h2><span class="n">7</span>KVKK md. 11 kapsamındaki haklarınız</h2>
+    <ul class="list">
+      <li>Kişisel verilerinin işlenip işlenmediğini öğrenme,</li>
+      <li>İşlenmişse buna ilişkin bilgi talep etme,</li>
+      <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+      <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme,</li>
+      <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme,</li>
+      <li>KVKK md. 7'deki şartlar çerçevesinde silinmesini veya yok edilmesini isteme,</li>
+      <li>Düzeltme, silme veya yok etme işlemlerinin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+      <li>Münhasıran otomatik sistemlerle analiz edilmesi suretiyle aleyhine bir sonucun ortaya çıkmasına itiraz etme,</li>
+      <li>Kanuna aykırı işlenmesi sebebiyle zarara uğraman hâlinde zararın giderilmesini talep etme.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="tr-8">
+    <h2><span class="n">8</span>Başvuru</h2>
+    <p>Haklarına ilişkin başvurunu, Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ'e uygun olarak kimlik bilgilerini ve talebini içeren bir dilekçeyle yapabilirsin:</p>
+    <ul class="list">
+      <li>Islak imzalı olarak Rektörlük adresine elden veya posta yoluyla,</li>
+      <li>Güvenli elektronik imzalı olarak <b>erzincanunv@hs02.kep.tr</b> KEP adresine,</li>
+      <li>Üniversite sistemlerinde kayıtlı e-posta adresinden <b>rektorluk@erzincan.edu.tr</b> adresine.</li>
+    </ul>
+    <p>Başvurular en geç 30 gün içinde ücretsiz sonuçlandırılır; işlemin ayrıca bir maliyet gerektirmesi hâlinde Kişisel Verileri Koruma Kurulu'nun belirlediği tarife uygulanabilir.</p>
+    <p class="note">Hesabını ve profil bilgilerini uygulamadaki <b>Profil › Ayarlar</b> ekranından kendin silebilirsin.</p>
+  </section>
+</article>
+
+<!-- ═════════════════════════════ ENGLISH ═════════════════════════════ -->
+<article data-lang="en" hidden>
+  <section class="card tldr">
+    <h2>In short</h2>
+    <ul>
+      <li>You sign in with your university e-mail; we never ask for or store a password.</li>
+      <li>Your data is hosted on servers in Türkiye.</li>
+      <li>We do not use your location, contacts or microphone; there are no ads or third-party trackers.</li>
+      <li>Profile photo, name and student number are optional.</li>
+      <li>You can delete your account from within the app at any time.</li>
+      <li>You can exercise your rights under Article 11 of the KVKK at any time.</li>
+    </ul>
+  </section>
+
+  <nav class="card" aria-label="Contents">
+    <ul class="toc">
+      <li><a href="#en-1">Data controller</a></li><li><a href="#en-2">Data we process</a></li><li><a href="#en-3">Purposes</a></li>
+      <li><a href="#en-4">Legal grounds</a></li><li><a href="#en-5">Transfers</a></li><li><a href="#en-6">Retention</a></li>
+      <li><a href="#en-7">Your rights</a></li><li><a href="#en-8">How to apply</a></li>
+    </ul>
+  </nav>
+
+  <section class="card" id="en-1">
+    <h2><span class="n">1</span>Data controller</h2>
+    <p>Under the Personal Data Protection Law No. 6698 ("KVKK"), the data controller for personal data processed in the EBYÜ Kampüs app is the <b>Rectorate of Erzincan Binali Yıldırım University</b>.</p>
+    <div class="contact">
+      <div><b>Address</b>Yalnızbağ Campus, 24002 Erzincan, Türkiye</div>
+      <div><b>Registered e-mail (KEP)</b>erzincanunv@hs02.kep.tr</div>
+      <div><b>E-mail</b><a href="mailto:rektorluk@erzincan.edu.tr">rektorluk@erzincan.edu.tr</a></div>
+      <div><b>Phone</b><a href="tel:+904448024">+90 444 8 024</a></div>
+    </div>
+  </section>
+
+  <section class="card" id="en-2">
+    <h2><span class="n">2</span>What personal data we process</h2>
+    <div class="table"><table>
+      <thead><tr><th>Category</th><th>Data</th><th>When</th></tr></thead>
+      <tbody>
+        <tr><td>Identity and contact</td><td>University e-mail address; optional full name and nickname</td><td>Sign-in and profile</td></tr>
+        <tr><td>Study information</td><td>Faculty, department, year of study; optional student number</td><td>When you fill in your profile</td></tr>
+        <tr><td>Image</td><td>Optional profile photo</td><td>When you upload a photo</td></tr>
+        <tr><td>Security of processing</td><td>Encrypted hash of the one-time sign-in code, session tokens, device ID, platform and app version, notification token, IP address and access logs</td><td>When you use the app</td></tr>
+        <tr><td>Requests and feedback</td><td>Type, subject and text of your request, complaint or suggestion, the unit you chose and the reply</td><td>When you send a request</td></tr>
+        <tr><td>Events</td><td>Event registration, ticket code, attendance time; survey answers and certificate number where applicable</td><td>When you register for an event</td></tr>
+        <tr><td>Preferences and usage</td><td>Language, theme and notification preferences; cafeteria menu ratings and crowd reports</td><td>When you use the feature</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note"><b>Kept only on your device:</b> your timetable, the guide chapters you have read and your selected bus stop are never sent to the server.<br><b>Never processed:</b> location, contacts, microphone, health data and advertising IDs.</p>
+    <p class="meta">Data is collected electronically through the app and its admin panel — from what you enter and automatically while you use the app.</p>
+  </section>
+
+  <section class="card" id="en-3">
+    <h2><span class="n">3</span>Purposes of processing</h2>
+    <ul class="list">
+      <li>Verifying your identity through your university e-mail and keeping your account secure,</li>
+      <li>Showing the cafeteria menu, academic calendar, announcements and events for your faculty,</li>
+      <li>Forwarding your requests, complaints and suggestions to the right unit and replying to them,</li>
+      <li>Event registration, attendance and participation certificates,</li>
+      <li>Sending announcements and reminders as notifications,</li>
+      <li>Ensuring information security, preventing misuse and meeting legal obligations,</li>
+      <li>Improving the service through anonymous, aggregated statistics.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="en-4">
+    <h2><span class="n">4</span>Legal grounds</h2>
+    <ul class="list">
+      <li><b>KVKK Art. 5(2)(a) and (ç):</b> providing services to students under Higher Education Law No. 2547, and access-log obligations under Law No. 5651,</li>
+      <li><b>KVKK Art. 5(2)(c):</b> processing directly necessary to set up and provide the app service (sign-in, requests, event registration),</li>
+      <li><b>KVKK Art. 5(2)(f):</b> legitimate interest in information security and service improvement, provided your fundamental rights and freedoms are not harmed,</li>
+      <li><b>KVKK Art. 5(1) — explicit consent:</b> the optional profile photo and push notifications. You can withdraw consent at any time by removing the photo or turning off notifications in your device settings.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="en-5">
+    <h2><span class="n">5</span>Transfers of personal data</h2>
+    <ul class="list">
+      <li>Data is hosted on servers located in Türkiye.</li>
+      <li>Your requests are seen only by the relevant university unit and authorised staff.</li>
+      <li>Data is disclosed to legally authorised public bodies only where required by law.</li>
+      <li>When notifications are enabled, your device's notification token is sent to Google (Firebase Cloud Messaging) and Apple (APNs) so that notifications can reach your phone. These services may use servers abroad; this transfer takes place under KVKK Article 9 and only once you allow notifications.</li>
+      <li>Your personal data is never shared with third parties for advertising or marketing, and never sold.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="en-6">
+    <h2><span class="n">6</span>Retention periods</h2>
+    <ul class="list">
+      <li><b>Account data:</b> for as long as your account is open. When you delete your account, your e-mail, name, nickname, student number, department, profile photo and notification token are erased immediately and the remaining records are anonymised.</li>
+      <li><b>Sign-in code:</b> 5 minutes · <b>Session refresh token:</b> up to 30 days.</li>
+      <li><b>In-app notifications:</b> 90 days.</li>
+      <li><b>Requests, event registrations and certificates:</b> until the process is completed and for the period required by applicable legislation, after which they are deleted or anonymised.</li>
+      <li><b>Access logs:</b> for the period required by Law No. 5651 and related legislation.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="en-7">
+    <h2><span class="n">7</span>Your rights under KVKK Article 11</h2>
+    <ul class="list">
+      <li>To learn whether your personal data is processed,</li>
+      <li>To request information if it has been processed,</li>
+      <li>To learn the purpose of processing and whether data is used accordingly,</li>
+      <li>To know the third parties in Türkiye or abroad to whom data is transferred,</li>
+      <li>To request correction of incomplete or inaccurate data,</li>
+      <li>To request erasure or destruction under the conditions of KVKK Article 7,</li>
+      <li>To request that correction, erasure or destruction be notified to third parties who received the data,</li>
+      <li>To object to a result against you arising exclusively from automated analysis,</li>
+      <li>To claim compensation for damage caused by unlawful processing.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="en-8">
+    <h2><span class="n">8</span>How to apply</h2>
+    <p>You can apply in line with the Communiqué on the Procedures and Principles of Application to the Data Controller, with a petition stating your identity and your request:</p>
+    <ul class="list">
+      <li>Signed in wet ink, delivered by hand or by post to the Rectorate address,</li>
+      <li>Signed with a secure electronic signature to the KEP address <b>erzincanunv@hs02.kep.tr</b>,</li>
+      <li>From the e-mail address registered in university systems to <b>rektorluk@erzincan.edu.tr</b>.</li>
+    </ul>
+    <p>Applications are concluded free of charge within 30 days at the latest; if the process involves an additional cost, the fee schedule set by the Personal Data Protection Board may apply.</p>
+    <p class="note">You can delete your account and profile data yourself under <b>Profile › Settings</b> in the app.</p>
+    <p class="meta">This is a translation. In case of any discrepancy, the Turkish text prevails.</p>
+  </section>
+</article>
+
+<!-- ═════════════════════════════ العربية ═════════════════════════════ -->
+<article data-lang="ar" hidden>
+  <section class="card tldr">
+    <h2>باختصار</h2>
+    <ul>
+      <li>تسجّل الدخول ببريدك الجامعي؛ لا نطلب كلمة مرور ولا نحتفظ بها.</li>
+      <li>تُستضاف بياناتك على خوادم داخل تركيا.</li>
+      <li>لا نستخدم موقعك أو جهات اتصالك أو الميكروفون، ولا توجد إعلانات أو أدوات تتبّع من أطراف ثالثة.</li>
+      <li>صورة الملف الشخصي والاسم والرقم الجامعي اختيارية.</li>
+      <li>يمكنك حذف حسابك من داخل التطبيق في أي وقت.</li>
+      <li>يمكنك ممارسة حقوقك وفق المادة 11 من القانون في أي وقت.</li>
+    </ul>
+  </section>
+
+  <nav class="card" aria-label="المحتويات">
+    <ul class="toc">
+      <li><a href="#ar-1">المسؤول عن البيانات</a></li><li><a href="#ar-2">البيانات المعالجة</a></li><li><a href="#ar-3">الأغراض</a></li>
+      <li><a href="#ar-4">الأسس القانونية</a></li><li><a href="#ar-5">النقل</a></li><li><a href="#ar-6">مدة الحفظ</a></li>
+      <li><a href="#ar-7">حقوقك</a></li><li><a href="#ar-8">تقديم الطلب</a></li>
+    </ul>
+  </nav>
+
+  <section class="card" id="ar-1">
+    <h2><span class="n">1</span>المسؤول عن البيانات</h2>
+    <p>وفقاً لقانون حماية البيانات الشخصية رقم 6698، فإن المسؤول عن البيانات الشخصية التي تُعالَج في تطبيق EBYÜ Kampüs هو <b>رئاسة جامعة إرزنجان بينالي يلدريم</b>.</p>
+    <div class="contact">
+      <div><b>العنوان</b>حرم يالنيزباغ، 24002 أرزنجان، تركيا</div>
+      <div><b>البريد الإلكتروني المسجّل (KEP)</b><span dir="ltr">erzincanunv@hs02.kep.tr</span></div>
+      <div><b>البريد الإلكتروني</b><a href="mailto:rektorluk@erzincan.edu.tr" dir="ltr">rektorluk@erzincan.edu.tr</a></div>
+      <div><b>الهاتف</b><a href="tel:+904448024" dir="ltr">+90 444 8 024</a></div>
+    </div>
+  </section>
+
+  <section class="card" id="ar-2">
+    <h2><span class="n">2</span>البيانات الشخصية التي نعالجها</h2>
+    <div class="table"><table>
+      <thead><tr><th>الفئة</th><th>البيانات</th><th>متى</th></tr></thead>
+      <tbody>
+        <tr><td>الهوية والتواصل</td><td>البريد الإلكتروني الجامعي؛ الاسم الكامل والاسم المستعار اختيارياً</td><td>عند تسجيل الدخول وفي الملف الشخصي</td></tr>
+        <tr><td>المعلومات الدراسية</td><td>الكلية والقسم والسنة الدراسية؛ الرقم الجامعي اختيارياً</td><td>عند تعبئة الملف الشخصي</td></tr>
+        <tr><td>الصورة</td><td>صورة الملف الشخصي (اختيارية)</td><td>عند رفع صورة</td></tr>
+        <tr><td>أمن المعالجة</td><td>بصمة مشفّرة لرمز الدخول لمرة واحدة، ورموز الجلسة، ومعرّف الجهاز، والنظام وإصدار التطبيق، ورمز الإشعارات، وعنوان IP وسجلات الوصول</td><td>عند استخدام التطبيق</td></tr>
+        <tr><td>الطلبات والملاحظات</td><td>نوع الطلب أو الشكوى أو الاقتراح وموضوعه ونصه والوحدة التي اخترتها والرد</td><td>عند إرسال طلب</td></tr>
+        <tr><td>الفعاليات</td><td>تسجيل الفعالية، ورمز التذكرة، ووقت الحضور؛ وإجابات الاستبيان ورقم شهادة المشاركة إن وُجدت</td><td>عند التسجيل في فعالية</td></tr>
+        <tr><td>التفضيلات والاستخدام</td><td>اللغة والمظهر وتفضيلات الإشعارات؛ وتقييمات قائمة الطعام وبلاغات الازدحام في المطعم</td><td>عند استخدام الميزة</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note"><b>ما يبقى على جهازك فقط:</b> جدولك الدراسي وفصول الدليل التي قرأتها ومحطة الحافلة التي اخترتها لا تُرسل إلى الخادم.<br><b>ما لا نعالجه:</b> الموقع وجهات الاتصال والميكروفون والبيانات الصحية ومعرّفات الإعلانات.</p>
+    <p class="meta">تُجمع البيانات إلكترونياً عبر التطبيق ولوحة الإدارة، مما تُدخله أنت وتلقائياً أثناء الاستخدام.</p>
+  </section>
+
+  <section class="card" id="ar-3">
+    <h2><span class="n">3</span>أغراض المعالجة</h2>
+    <ul class="list">
+      <li>التحقق من هويتك عبر البريد الجامعي وحماية حسابك،</li>
+      <li>عرض قائمة الطعام والتقويم الأكاديمي والإعلانات والفعاليات بحسب كليتك،</li>
+      <li>إيصال طلباتك وشكاواك واقتراحاتك إلى الوحدة المعنية والرد عليها،</li>
+      <li>تسجيل الفعاليات وإثبات الحضور وإصدار شهادات المشاركة،</li>
+      <li>إرسال الإعلانات والتذكيرات كإشعارات،</li>
+      <li>ضمان أمن المعلومات ومنع إساءة الاستخدام والوفاء بالالتزامات القانونية،</li>
+      <li>تحسين الخدمة عبر إحصاءات مجهولة الهوية ومجمّعة.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="ar-4">
+    <h2><span class="n">4</span>الأسس القانونية</h2>
+    <ul class="list">
+      <li><b>المادة 5/2 (أ) و(ç):</b> تقديم الخدمات للطلاب بموجب قانون التعليم العالي رقم 2547، والتزامات سجلات الوصول بموجب القانون رقم 5651،</li>
+      <li><b>المادة 5/2 (ج):</b> ضرورة المعالجة مباشرةً لإنشاء خدمة التطبيق وتقديمها (الدخول والطلبات وتسجيل الفعاليات)،</li>
+      <li><b>المادة 5/2 (و):</b> المصلحة المشروعة في أمن المعلومات وتحسين الخدمة، بشرط عدم الإضرار بحقوقك وحرياتك الأساسية،</li>
+      <li><b>المادة 5/1 — الموافقة الصريحة:</b> صورة الملف الشخصي الاختيارية والإشعارات. يمكنك سحب موافقتك في أي وقت بحذف الصورة أو إيقاف الإشعارات من إعدادات جهازك.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="ar-5">
+    <h2><span class="n">5</span>نقل البيانات الشخصية</h2>
+    <ul class="list">
+      <li>تُستضاف البيانات على خوادم موجودة في تركيا.</li>
+      <li>لا يطّلع على طلباتك إلا الوحدة الجامعية المعنية والموظفون المخوّلون.</li>
+      <li>لا تُفصح البيانات للجهات العامة المخوّلة قانوناً إلا عند وجود إلزام قانوني.</li>
+      <li>عند تفعيل الإشعارات، يُرسل رمز الإشعارات الخاص بجهازك إلى Google (Firebase Cloud Messaging) وApple (APNs) لإيصال الإشعارات إلى هاتفك. قد تستخدم هذه الخدمات خوادم خارج تركيا، ويتم هذا النقل وفق المادة 9 من القانون وبعد موافقتك على الإشعارات فقط.</li>
+      <li>لا تُشارك بياناتك الشخصية مع أي طرف ثالث لأغراض الإعلان أو التسويق، ولا تُباع.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="ar-6">
+    <h2><span class="n">6</span>مدة الحفظ</h2>
+    <ul class="list">
+      <li><b>بيانات الحساب:</b> طوال مدة بقاء الحساب مفتوحاً. عند حذف حسابك تُمحى فوراً بريدك الإلكتروني واسمك واسمك المستعار ورقمك الجامعي وقسمك وصورة ملفك الشخصي ورمز الإشعارات، وتُجعل السجلات المتبقية مجهولة الهوية.</li>
+      <li><b>رمز الدخول:</b> 5 دقائق · <b>رمز تجديد الجلسة:</b> 30 يوماً كحد أقصى.</li>
+      <li><b>الإشعارات داخل التطبيق:</b> 90 يوماً.</li>
+      <li><b>الطلبات وتسجيلات الفعاليات والشهادات:</b> حتى اكتمال الإجراء وطوال المدة التي تقتضيها التشريعات، ثم تُحذف أو تُجعل مجهولة الهوية.</li>
+      <li><b>سجلات الوصول:</b> طوال المدة التي يقتضيها القانون رقم 5651 والتشريعات ذات الصلة.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="ar-7">
+    <h2><span class="n">7</span>حقوقك وفق المادة 11</h2>
+    <ul class="list">
+      <li>معرفة ما إذا كانت بياناتك الشخصية تُعالَج،</li>
+      <li>طلب المعلومات إذا كانت قد عولجت،</li>
+      <li>معرفة غرض المعالجة وما إذا كانت البيانات تُستخدم وفقاً له،</li>
+      <li>معرفة الأطراف الثالثة داخل تركيا أو خارجها التي نُقلت إليها البيانات،</li>
+      <li>طلب تصحيح البيانات الناقصة أو غير الصحيحة،</li>
+      <li>طلب حذف البيانات أو إتلافها وفق شروط المادة 7 من القانون،</li>
+      <li>طلب إبلاغ الأطراف الثالثة التي نُقلت إليها البيانات بعمليات التصحيح أو الحذف أو الإتلاف،</li>
+      <li>الاعتراض على نتيجة تضرّ بك ناتجة حصراً عن التحليل الآلي،</li>
+      <li>المطالبة بالتعويض عن الضرر الناتج عن المعالجة المخالفة للقانون.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="ar-8">
+    <h2><span class="n">8</span>تقديم الطلب</h2>
+    <p>يمكنك تقديم طلبك وفق اللائحة الخاصة بإجراءات ومبادئ تقديم الطلبات إلى المسؤول عن البيانات، بعريضة تتضمن بيانات هويتك وطلبك:</p>
+    <ul class="list">
+      <li>موقّعة بخط اليد وتُسلَّم باليد أو بالبريد إلى عنوان رئاسة الجامعة،</li>
+      <li>موقّعة بتوقيع إلكتروني آمن إلى عنوان KEP: <b dir="ltr">erzincanunv@hs02.kep.tr</b>،</li>
+      <li>من بريدك الإلكتروني المسجّل في أنظمة الجامعة إلى <b dir="ltr">rektorluk@erzincan.edu.tr</b>.</li>
+    </ul>
+    <p>تُنجز الطلبات مجاناً خلال 30 يوماً كحد أقصى؛ وإذا تطلّب الإجراء تكلفة إضافية فقد تُطبّق التعرفة التي يحددها مجلس حماية البيانات الشخصية.</p>
+    <p class="note">يمكنك حذف حسابك وبيانات ملفك الشخصي بنفسك من شاشة <b>الملف الشخصي › الإعدادات</b> في التطبيق.</p>
+    <p class="meta">هذه ترجمة، وفي حال وجود اختلاف يُعتمد النص التركي.</p>
+  </section>
+</article>
+
+</main>
+
+<footer>
+  <div data-lang="tr">Son güncelleme: 11 Eylül 2026 · Sürüm 1.0</div>
+  <div data-lang="en" hidden>Last updated: 11 September 2026 · Version 1.0</div>
+  <div data-lang="ar" hidden>آخر تحديث: 11 سبتمبر 2026 · الإصدار 1.0</div>
+</footer>
+
+<script>
+  (function () {
+    var langs = ['tr', 'en', 'ar'];
+    var titles = {
+      tr: 'EBYÜ Kampüs · KVKK Aydınlatma Metni',
+      en: 'EBYÜ Kampüs · Privacy Notice (KVKK)',
+      ar: 'EBYÜ Kampüs · إشعار حماية البيانات الشخصية'
+    };
+    function setLang(lang, updateHash) {
+      if (langs.indexOf(lang) < 0) lang = 'tr';
+      var root = document.documentElement;
+      root.lang = lang;
+      root.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.title = titles[lang];
+      document.querySelectorAll('[data-lang]').forEach(function (el) { el.hidden = el.getAttribute('data-lang') !== lang; });
+      document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === lang)); });
+      if (updateHash) history.replaceState(null, '', '#' + lang);
+    }
+    document.querySelectorAll('.lang button').forEach(function (b) {
+      b.addEventListener('click', function () { setLang(b.getAttribute('data-set'), true); });
+    });
+    // Uygulama dili adresin sonundaki #tr / #en / #ar ile gelir; yoksa tarayıcı dili.
+    var fromHash = (location.hash || '').replace('#', '').slice(0, 2);
+    var fromBrowser = (navigator.language || 'tr').slice(0, 2);
+    setLang(langs.indexOf(fromHash) >= 0 ? fromHash : (langs.indexOf(fromBrowser) >= 0 ? fromBrowser : 'tr'), false);
+  })();
+</script>
+</body>
+</html>
