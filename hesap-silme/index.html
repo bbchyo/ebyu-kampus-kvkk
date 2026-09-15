@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EBYÜ Kampüs — Hesap ve Veri Silme Talebi</title>
+<style>
+  :root{
+    --navy:#001C54; --navy-2:#0B2A6B; --gold:#D0A53D; --gold-ink:#8A6A18;
+    --ink:#14213D; --muted:#56617A; --line:#E3E8F2; --bg:#F7F9FC; --card:#fff;
+    --heading:#001C54;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  header{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;padding:34px 20px 30px}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  header h1{margin:0 0 6px;font-size:26px;line-height:1.25}
+  header p{margin:0;color:#C9D4E8;font-size:15px}
+  .langs{display:flex;gap:8px;margin-bottom:18px}
+  .langs button{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);
+    color:#fff;padding:6px 14px;border-radius:999px;font-size:14px;cursor:pointer}
+  .langs button[aria-selected="true"]{background:var(--gold);border-color:var(--gold);color:var(--navy);font-weight:700}
+  main{padding:28px 0 60px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:22px 24px;margin:0 0 18px}
+  h2{font-size:19px;margin:0 0 12px;color:var(--heading)}
+  ol,ul{margin:0;padding-left:22px}
+  li{margin:0 0 9px}
+  table{width:100%;border-collapse:collapse;margin-top:6px;font-size:15px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600;width:44%}
+  .note{background:#FFF8E6;border:1px solid #F0DFAE;border-radius:12px;padding:14px 16px;
+    font-size:15px;color:var(--gold-ink)}
+  a{color:var(--navy-2)}
+  footer{color:var(--muted);font-size:13.5px;text-align:center;padding:0 20px 40px}
+  [hidden]{display:none!important}
+  [dir="rtl"]{direction:rtl}
+  [dir="rtl"] ol,[dir="rtl"] ul{padding-left:0;padding-right:22px}
+  [dir="rtl"] th,[dir="rtl"] td{text-align:right}
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#0E1526;--card:#151E33;--line:#243149;--ink:#E8EDF7;--muted:#96A2BC;
+      --heading:#9FB6E8}
+    .note{background:#2A2312;border-color:#4A3D1B;color:#E5C877}
+    a{color:#9FB6E8}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="langs" role="tablist">
+      <button role="tab" data-lang="tr" aria-selected="true">Türkçe</button>
+      <button role="tab" data-lang="en" aria-selected="false">English</button>
+      <button role="tab" data-lang="ar" aria-selected="false">العربية</button>
+    </div>
+    <h1 data-tr="EBYÜ Kampüs — Hesap ve Veri Silme Talebi"
+        data-en="EBYÜ Kampüs — Account and Data Deletion"
+        data-ar="حرم EBYÜ — حذف الحساب والبيانات">EBYÜ Kampüs — Hesap ve Veri Silme Talebi</h1>
+    <p data-tr="Erzincan Binali Yıldırım Üniversitesi resmî kampüs uygulaması"
+       data-en="Official campus app of Erzincan Binali Yıldırım University"
+       data-ar="التطبيق الرسمي لحرم جامعة أرزنجان بينالي يلدريم">Erzincan Binali Yıldırım Üniversitesi resmî kampüs uygulaması</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ── TÜRKÇE ──────────────────────────────────────────────────────── -->
+  <section data-panel="tr">
+    <div class="card">
+      <h2>Uygulamadan silme (en hızlı yol)</h2>
+      <ol>
+        <li><strong>EBYÜ Kampüs</strong> uygulamasını aç ve hesabınla giriş yap.</li>
+        <li>Alt menüden <strong>Profil</strong> sekmesine git.</li>
+        <li>Sağ üstteki <strong>Ayarlar</strong> (dişli) simgesine dokun.</li>
+        <li>Sayfanın altındaki <strong>Hesabımı sil</strong> düğmesine dokun.</li>
+        <li>Çıkan onay penceresinde <strong>Hesabımı sil</strong>'i seçerek işlemi doğrula.</li>
+      </ol>
+      <p style="margin:12px 0 0">Onayladığın anda hesabın kapatılır ve aşağıdaki
+      tabloda "derhâl silinir" denen veriler geri döndürülemez biçimde kaldırılır.</p>
+    </div>
+
+    <div class="card">
+      <h2>Uygulamaya erişemiyorsan — e-posta ile talep</h2>
+      <p style="margin:0 0 10px">Telefonunu kaybettiysen ya da uygulamayı sildiysen
+      talebini e-postayla iletebilirsin:</p>
+      <ul>
+        <li><strong>Alıcı:</strong> <a href="mailto:kvkkoor@ebyu.edu.tr">kvkkoor@ebyu.edu.tr</a>
+        (Kişisel Verileri Koruma Koordinatörlüğü)</li>
+        <li><strong>KEP:</strong> erzincanunv@hs02.kep.tr</li>
+        <li><strong>Konu:</strong> EBYÜ Kampüs — Hesap silme talebi</li>
+        <li><strong>İçerik:</strong> Ad soyad, öğrenci numarası ve uygulamada kayıtlı
+        üniversite e-posta adresin.</li>
+      </ul>
+      <p style="margin:12px 0 0">Talebin kimliğin doğrulandıktan sonra
+      <strong>en geç 30 gün</strong> içinde sonuçlandırılır (KVKK md. 13).</p>
+    </div>
+
+    <div class="card">
+      <h2>Ne siliniyor, ne saklanıyor?</h2>
+      <table>
+        <tr><th>Derhâl ve geri döndürülemez biçimde silinir</th>
+            <td>Ad soyad, rumuz, üniversite e-posta adresi, öğrenci numarası,
+            fakülte ve bölüm bilgisi, profil fotoğrafı, cihaz kimliği ve bildirim
+            anahtarı, oturum anahtarları.</td></tr>
+        <tr><th>Anonimleştirilerek saklanır</th>
+            <td>Yemek menüsü puanları, kuyruk yoğunluğu bildirimleri ve okuma
+            ilerlemesi gibi istatistikler — kimliğinle bağı koparılır, sana geri
+            bağlanamaz.</td></tr>
+        <tr><th>Yasal saklama süresince tutulur</th>
+            <td>Açtığın talep/şikâyet kayıtları ve bunlara verilen kurumsal
+            yanıtlar, ilgili mevzuat gereği idari süreç kaydı olarak
+            <strong>2 yıl</strong> saklanır, sonra silinir.</td></tr>
+        <tr><th>Hiç toplanmayan</th>
+            <td>Konum, rehber, mikrofon, arama geçmişi. Uygulama bu verilere
+            erişmez. <strong>Otomasyon (OBS) şifren hiçbir yere kaydedilmez</strong>;
+            yalnızca giriş isteğini taşır.</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Yalnız bir kısmını silmek istersen</h2>
+      <p style="margin:0">Hesabını kapatmadan profil fotoğrafını kaldırmak için:
+      <strong>Profil → Fotoğrafı kaldır</strong>. Diğer verilerin bir bölümünün
+      silinmesini istiyorsan yukarıdaki e-posta adresine hangi veriyi
+      kastettiğini yazarak başvurabilirsin.</p>
+    </div>
+
+    <div class="note">
+      Silme işlemi yalnızca <strong>EBYÜ Kampüs uygulamasındaki</strong> kaydını
+      kapsar. Öğrenci Bilgi Sistemi (OBS) hesabın, öğrencilik kaydın ve
+      üniversite e-posta hesabın bu işlemden etkilenmez; onlar Öğrenci İşleri
+      Daire Başkanlığı'nın sorumluluğundadır.
+    </div>
+  </section>
+
+  <!-- ── ENGLISH ─────────────────────────────────────────────────────── -->
+  <section data-panel="en" hidden>
+    <div class="card">
+      <h2>Delete from inside the app (fastest)</h2>
+      <ol>
+        <li>Open <strong>EBYÜ Kampüs</strong> and sign in to your account.</li>
+        <li>Go to the <strong>Profil</strong> (Profile) tab in the bottom bar.</li>
+        <li>Tap the <strong>Ayarlar</strong> (Settings, gear) icon at the top right.</li>
+        <li>Tap <strong>Hesabımı sil</strong> (Delete my account) at the bottom of the page.</li>
+        <li>Confirm in the dialog that appears.</li>
+      </ol>
+      <p style="margin:12px 0 0">Your account is closed immediately and everything
+      listed as "deleted immediately" below is removed irreversibly.</p>
+    </div>
+
+    <div class="card">
+      <h2>If you cannot access the app — request by e-mail</h2>
+      <ul>
+        <li><strong>To:</strong> <a href="mailto:kvkkoor@ebyu.edu.tr">kvkkoor@ebyu.edu.tr</a>
+        (Personal Data Protection Coordination Office)</li>
+        <li><strong>Subject:</strong> EBYÜ Kampüs — Account deletion request</li>
+        <li><strong>Include:</strong> your full name, student number and the
+        university e-mail address registered in the app.</li>
+      </ul>
+      <p style="margin:12px 0 0">Requests are completed within
+      <strong>30 days at the latest</strong> after identity verification
+      (Turkish Personal Data Protection Law no. 6698, art. 13).</p>
+    </div>
+
+    <div class="card">
+      <h2>What is deleted and what is kept</h2>
+      <table>
+        <tr><th>Deleted immediately and irreversibly</th>
+            <td>Full name, nickname, university e-mail address, student number,
+            faculty and department, profile photo, device identifier and push
+            token, session tokens.</td></tr>
+        <tr><th>Kept in anonymised form</th>
+            <td>Statistics such as menu ratings, queue reports and reading
+            progress — unlinked from your identity and not traceable back to you.</td></tr>
+        <tr><th>Kept for the statutory period</th>
+            <td>Requests and complaints you filed and the institutional replies
+            to them are kept as administrative records for <strong>2 years</strong>,
+            then deleted.</td></tr>
+        <tr><th>Never collected</th>
+            <td>Location, contacts, microphone, call history. Your university
+            (OBS) password is <strong>never stored</strong>; it only carries the
+            sign-in request.</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Deleting only part of your data</h2>
+      <p style="margin:0">To remove just your profile photo without closing your
+      account: <strong>Profil → Fotoğrafı kaldır</strong> (Profile → Remove photo).
+      For other partial deletions, write to the e-mail address above stating
+      which data you mean.</p>
+    </div>
+
+    <div class="note">
+      Deletion covers only your record in the <strong>EBYÜ Kampüs app</strong>.
+      Your Student Information System (OBS) account, your student enrolment and
+      your university e-mail account are not affected; those are managed by the
+      Registrar's Office.
+    </div>
+  </section>
+
+  <!-- ── العربية ─────────────────────────────────────────────────────── -->
+  <section data-panel="ar" dir="rtl" hidden>
+    <div class="card">
+      <h2>الحذف من داخل التطبيق (الأسرع)</h2>
+      <ol>
+        <li>افتح تطبيق <strong>EBYÜ Kampüs</strong> وسجّل الدخول إلى حسابك.</li>
+        <li>انتقل إلى تبويب <strong>Profil</strong> (الملف الشخصي) في الشريط السفلي.</li>
+        <li>اضغط أيقونة <strong>Ayarlar</strong> (الإعدادات) أعلى اليمين.</li>
+        <li>اضغط <strong>Hesabımı sil</strong> (حذف حسابي) أسفل الصفحة.</li>
+        <li>أكّد العملية في النافذة التي تظهر.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>إذا تعذّر عليك الوصول إلى التطبيق</h2>
+      <ul>
+        <li><strong>إلى:</strong> <a href="mailto:kvkkoor@ebyu.edu.tr">kvkkoor@ebyu.edu.tr</a>
+        (تنسيقية حماية البيانات الشخصية)</li>
+        <li><strong>الموضوع:</strong> EBYÜ Kampüs — طلب حذف الحساب</li>
+        <li><strong>المحتوى:</strong> الاسم الكامل، رقم الطالب، وعنوان البريد
+        الجامعي المسجّل في التطبيق.</li>
+      </ul>
+      <p style="margin:12px 0 0">يُستكمل الطلب خلال <strong>30 يوماً</strong> كحدّ
+      أقصى بعد التحقق من الهوية.</p>
+    </div>
+
+    <div class="card">
+      <h2>ما يُحذف وما يُحتفظ به</h2>
+      <table>
+        <tr><th>يُحذف فوراً ونهائياً</th>
+            <td>الاسم، الكنية، البريد الجامعي، رقم الطالب، الكلية والقسم، الصورة
+            الشخصية، معرّف الجهاز ومفتاح الإشعارات، مفاتيح الجلسة.</td></tr>
+        <tr><th>يُحفظ بشكل مجهول الهوية</th>
+            <td>إحصاءات مثل تقييم القوائم وبلاغات الازدحام وتقدّم القراءة — تُفصل
+            عن هويتك ولا يمكن ربطها بك.</td></tr>
+        <tr><th>يُحفظ للمدة القانونية</th>
+            <td>الطلبات والشكاوى والردود المؤسسية عليها تُحفظ <strong>سنتين</strong>
+            كسجل إداري ثم تُحذف.</td></tr>
+        <tr><th>لا يُجمع إطلاقاً</th>
+            <td>الموقع، جهات الاتصال، الميكروفون، سجل المكالمات. كلمة مرور نظام
+            الجامعة <strong>لا تُخزَّن</strong> إطلاقاً.</td></tr>
+      </table>
+    </div>
+
+    <div class="note">
+      يشمل الحذف سجلّك في <strong>تطبيق EBYÜ Kampüs</strong> فقط. أما حسابك في
+      نظام معلومات الطلاب (OBS) وقيدك الجامعي وبريدك الجامعي فلا تتأثر.
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p><strong>Veri sorumlusu / Data controller:</strong><br>
+  Erzincan Binali Yıldırım Üniversitesi Rektörlüğü<br>
+  Kişisel Verileri Koruma Koordinatörlüğü ·
+  <a href="mailto:kvkkoor@ebyu.edu.tr">kvkkoor@ebyu.edu.tr</a><br>
+  KEP: erzincanunv@hs02.kep.tr · Tel: 0 (446) 226 66 66<br>
+  Yalnızbağ Yerleşkesi, 24002 Erzincan / Türkiye</p>
+  <p><a href="https://bbchyo.github.io/ebyu-kampus-kvkk/">KVKK Aydınlatma Metni · Privacy Notice</a></p>
+  <p>Son güncelleme / Last updated: 15.09.2026</p>
+</footer>
+
+<script>
+  const buttons = document.querySelectorAll('.langs button');
+  const panels = document.querySelectorAll('[data-panel]');
+  function show(lang){
+    buttons.forEach(b => b.setAttribute('aria-selected', String(b.dataset.lang === lang)));
+    panels.forEach(p => { p.hidden = p.dataset.panel !== lang; });
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-tr]').forEach(el => {
+      el.textContent = el.dataset[lang] || el.dataset.tr;
+    });
+    try { location.hash = lang; } catch (_) {}
+  }
+  buttons.forEach(b => b.addEventListener('click', () => show(b.dataset.lang)));
+  const start = (location.hash || '').replace('#','');
+  show(['tr','en','ar'].includes(start) ? start : 'tr');
+</script>
+</body>
+</html>

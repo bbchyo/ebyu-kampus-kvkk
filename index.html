@@ -50,6 +50,7 @@
   .tldr ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
   .tldr li { display: flex; gap: 10px; align-items: flex-start; background: var(--bg); border-radius: 12px; padding: 12px 14px; }
   .tldr li::before { content: "✓"; color: var(--gold-ink); font-weight: 800; }
+  .tldr li > span { min-width: 0; }
   h2 { font-size: 20px; margin: 0 0 10px; line-height: 1.3; }
   h2 .n { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 9px; background: var(--navy); color: #fff; font-size: 14px; margin-inline-end: 10px; vertical-align: 2px; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) h2 .n { background: var(--gold); color: var(--navy); } }
@@ -97,12 +98,12 @@
   <section class="card tldr">
     <h2>Kısaca</h2>
     <ul>
-      <li>Üniversite e-postanla giriş yaparsın; şifre istemeyiz, saklamayız.</li>
-      <li>Verilerin yalnızca Türkiye'deki sunucularda saklanır, yurt dışına aktarılmaz.</li>
-      <li>Konumunu, rehberini ya da mikrofonunu kullanmayız; reklam ve üçüncü taraf takip aracı yoktur.</li>
-      <li>Profil fotoğrafı, ad ve öğrenci numarası isteğe bağlıdır.</li>
-      <li>Hesabını uygulamadan istediğin an silebilirsin.</li>
-      <li>KVKK md. 11'deki haklarını her zaman kullanabilirsin.</li>
+      <li><span>Otomasyon (OBS) şifrenle giriş yaparsın; şifren üniversitenin doğrulama sistemine iletilir, bizde <b>saklanmaz</b>.</span></li>
+      <li><span>Verilerin yalnızca Türkiye'deki sunucularda saklanır, yurt dışına aktarılmaz.</span></li>
+      <li><span>Konumunu, rehberini ya da mikrofonunu kullanmayız; reklam ve üçüncü taraf takip aracı yoktur.</span></li>
+      <li><span>Profil fotoğrafı, ad ve öğrenci numarası isteğe bağlıdır.</span></li>
+      <li><span>Hesabını uygulamadan istediğin an silebilirsin.</span></li>
+      <li><span>KVKK md. 11'deki haklarını her zaman kullanabilirsin.</span></li>
     </ul>
   </section>
 
@@ -116,10 +117,12 @@
 
   <section class="card" id="tr-1">
     <h2><span class="n">1</span>Veri sorumlusu</h2>
-    <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, EBYÜ Kampüs uygulamasında işlenen kişisel verilerin veri sorumlusu <b>Arş. Gör. Hakkı Halil BABACAN</b>'dır.</p>
+    <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, EBYÜ Kampüs uygulamasında işlenen kişisel verilerin veri sorumlusu <b>Erzincan Binali Yıldırım Üniversitesi Rektörlüğü</b>'dür. Kişisel verilerin korunmasına ilişkin süreçler <b>Kişisel Verileri Koruma Koordinatörlüğü</b> tarafından yürütülür.</p>
     <div class="contact">
-      <div><b>Adres</b>Erzincan Binali Yıldırım Üniversitesi, Yalnızbağ Yerleşkesi, 24002 Erzincan</div>
-      <div><b>E-posta</b><a href="mailto:hakki.babacan@erzincan.edu.tr">hakki.babacan@erzincan.edu.tr</a></div>
+      <div><b>Adres</b>Erzincan Binali Yıldırım Üniversitesi Rektörlüğü, Yalnızbağ Yerleşkesi, 24002 Erzincan</div>
+      <div><b>E-posta</b><a href="mailto:kvkkoor@ebyu.edu.tr">kvkkoor@ebyu.edu.tr</a></div>
+      <div><b>KEP</b>erzincanunv@hs02.kep.tr</div>
+      <div><b>Telefon</b>0 (446) 226 66 66</div>
     </div>
   </section>
 
@@ -131,7 +134,7 @@
         <tr><td>Kimlik ve iletişim</td><td>Üniversite e-posta adresi; isteğe bağlı ad-soyad ve takma ad</td><td>Giriş ve profil</td></tr>
         <tr><td>Öğrenim bilgisi</td><td>Fakülte, bölüm, sınıf; isteğe bağlı öğrenci numarası</td><td>Profili doldurduğunda</td></tr>
         <tr><td>Görsel veri</td><td>İsteğe bağlı profil fotoğrafı</td><td>Fotoğraf yüklediğinde</td></tr>
-        <tr><td>İşlem güvenliği</td><td>Tek kullanımlık giriş kodunun şifrelenmiş özeti, oturum anahtarları, cihaz kimliği, platform ve uygulama sürümü, bildirim anahtarı, IP adresi ve erişim kayıtları</td><td>Uygulamayı kullandığında</td></tr>
+        <tr><td>İşlem güvenliği</td><td>Oturum anahtarları, cihaz kimliği, platform ve uygulama sürümü, bildirim anahtarı, IP adresi ve erişim kayıtları. <b>Otomasyon şifresi saklanmaz</b>; yalnızca giriş anında üniversitenin kimlik doğrulama sistemine iletilir.</td><td>Uygulamayı kullandığında</td></tr>
         <tr><td>Talep ve geri bildirim</td><td>Talep, şikâyet ve önerinin türü, konusu, metni, seçtiğin birim ve verilen yanıt</td><td>Talep gönderdiğinde</td></tr>
         <tr><td>Personel bilgisi</td><td>Ad, soyad, unvan, kadro yeri ve kurumsal e-posta — kurum otomasyonundan gelir</td><td>Personel girişinde</td></tr>
         <tr><td>Etkinlik</td><td>Etkinlik kaydı, bilet kodu, yoklama zamanı; varsa anket yanıtı ve katılım belgesi numarası</td><td>Etkinliğe kaydolduğunda</td></tr>
@@ -181,7 +184,7 @@
     <h2><span class="n">6</span>Saklama süreleri</h2>
     <ul class="list">
       <li><b>Hesap bilgileri:</b> hesabın açık olduğu sürece. Hesabını sildiğinde e-posta, ad, takma ad, öğrenci numarası, bölüm, profil fotoğrafı ve bildirim anahtarı derhâl silinir; kalan kayıtlar anonimleştirilir.</li>
-      <li><b>Giriş kodu:</b> 5 dakika · <b>Oturum yenileme anahtarı:</b> en fazla 30 gün.</li>
+      <li><b>Oturum yenileme anahtarı:</b> en fazla 30 gün.</li>
       <li><b>Uygulama içi bildirimler:</b> 90 gün.</li>
       <li><b>Talepler, etkinlik kayıtları ve katılım belgeleri:</b> işlemin tamamlanması ve ilgili mevzuatta öngörülen süre boyunca; sonrasında silinir veya anonimleştirilir.</li>
       <li><b>Erişim kayıtları:</b> 5651 sayılı Kanun ve ilgili mevzuatta öngörülen süre boyunca.</li>
@@ -207,12 +210,12 @@
     <h2><span class="n">8</span>Başvuru ve şikâyet</h2>
     <p>Haklarına ilişkin başvurunu, Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ'e uygun olarak kimlik bilgilerini ve talebini içeren bir dilekçeyle yapabilirsin:</p>
     <ul class="list">
-      <li>Islak imzalı olarak, Arş. Gör. Hakkı Halil BABACAN'a hitaben <b>Erzincan Binali Yıldırım Üniversitesi, Yalnızbağ Yerleşkesi, 24002 Erzincan</b> adresine elden veya posta yoluyla,</li>
-      <li>Güvenli elektronik imza ya da mobil imzayla veya uygulamada kayıtlı e-posta adresinden <b>hakki.babacan@erzincan.edu.tr</b> adresine.</li>
+      <li>Islak imzalı olarak, Erzincan Binali Yıldırım Üniversitesi Rektörlüğü Kişisel Verileri Koruma Koordinatörlüğü'ne hitaben <b>Yalnızbağ Yerleşkesi, 24002 Erzincan</b> adresine elden veya posta yoluyla,</li>
+      <li>Güvenli elektronik imza ya da mobil imzayla veya uygulamada kayıtlı e-posta adresinden <b>kvkkoor@ebyu.edu.tr</b> adresine, ya da KEP üzerinden <b>erzincanunv@hs02.kep.tr</b> adresine.</li>
     </ul>
     <p>Başvurular en geç 30 gün içinde ücretsiz sonuçlandırılır; işlemin ayrıca bir maliyet gerektirmesi hâlinde Kişisel Verileri Koruma Kurulu'nun belirlediği tarife uygulanabilir.</p>
     <p>Başvurun reddedilir, yanıtı yetersiz bulur ya da süresinde yanıt alamazsan KVKK md. 14 uyarınca Kişisel Verileri Koruma Kurulu'na şikâyette bulunabilirsin.</p>
-    <p class="note">Hesabını ve profil bilgilerini uygulamadaki <b>Profil › Ayarlar</b> ekranından kendin silebilirsin.</p>
+    <p class="note">Hesabını ve profil bilgilerini uygulamadaki <b>Profil › Ayarlar</b> ekranından kendin silebilirsin. Adımların tamamı ve hangi verinin silinip hangisinin saklandığı için: <a href="./hesap-silme/">Hesap ve Veri Silme Talebi</a>.</p>
   </section>
 </article>
 
@@ -221,12 +224,12 @@
   <section class="card tldr">
     <h2>In short</h2>
     <ul>
-      <li>You sign in with your university e-mail; we never ask for or store a password.</li>
-      <li>Your data is stored only on servers in Türkiye and is never transferred abroad.</li>
-      <li>We do not use your location, contacts or microphone; there are no ads or third-party trackers.</li>
-      <li>Profile photo, name and student number are optional.</li>
-      <li>You can delete your account from within the app at any time.</li>
-      <li>You can exercise your rights under Article 11 of the KVKK at any time.</li>
+      <li><span>You sign in with your university (OBS) password; it is passed to the university authentication system and <b>never stored</b> by us.</span></li>
+      <li><span>Your data is stored only on servers in Türkiye and is never transferred abroad.</span></li>
+      <li><span>We do not use your location, contacts or microphone; there are no ads or third-party trackers.</span></li>
+      <li><span>Profile photo, name and student number are optional.</span></li>
+      <li><span>You can delete your account from within the app at any time.</span></li>
+      <li><span>You can exercise your rights under Article 11 of the KVKK at any time.</span></li>
     </ul>
   </section>
 
@@ -240,10 +243,12 @@
 
   <section class="card" id="en-1">
     <h2><span class="n">1</span>Data controller</h2>
-    <p>Under the Personal Data Protection Law No. 6698 ("KVKK"), the data controller for personal data processed in the EBYÜ Kampüs app is <b>Res. Asst. Hakkı Halil BABACAN</b>.</p>
+    <p>Under the Personal Data Protection Law No. 6698 ("KVKK"), the data controller for personal data processed in the EBYÜ Kampüs app is the <b>Rectorate of Erzincan Binali Yıldırım University</b>. Data protection processes are carried out by the <b>Personal Data Protection Coordination Office</b>.</p>
     <div class="contact">
-      <div><b>Address</b>Erzincan Binali Yıldırım University, Yalnızbağ Campus, 24002 Erzincan, Türkiye</div>
-      <div><b>E-mail</b><a href="mailto:hakki.babacan@erzincan.edu.tr">hakki.babacan@erzincan.edu.tr</a></div>
+      <div><b>Address</b>Rectorate of Erzincan Binali Yıldırım University, Yalnızbağ Campus, 24002 Erzincan, Türkiye</div>
+      <div><b>E-mail</b><a href="mailto:kvkkoor@ebyu.edu.tr">kvkkoor@ebyu.edu.tr</a></div>
+      <div><b>Registered e-mail (KEP)</b>erzincanunv@hs02.kep.tr</div>
+      <div><b>Phone</b>+90 446 226 66 66</div>
     </div>
   </section>
 
@@ -255,7 +260,7 @@
         <tr><td>Identity and contact</td><td>University e-mail address; optional full name and nickname</td><td>Sign-in and profile</td></tr>
         <tr><td>Study information</td><td>Faculty, department, year of study; optional student number</td><td>When you fill in your profile</td></tr>
         <tr><td>Image</td><td>Optional profile photo</td><td>When you upload a photo</td></tr>
-        <tr><td>Security of processing</td><td>Encrypted hash of the one-time sign-in code, session tokens, device ID, platform and app version, notification token, IP address and access logs</td><td>When you use the app</td></tr>
+        <tr><td>Security of processing</td><td>Session tokens, device ID, platform and app version, notification token, IP address and access logs. <b>The university password is not stored</b>; it is only passed to the university authentication system at the moment of sign-in.</td><td>When you use the app</td></tr>
         <tr><td>Requests and feedback</td><td>Type, subject and text of your request, complaint or suggestion, the unit you chose and the reply</td><td>When you send a request</td></tr>
         <tr><td>Staff information</td><td>Name, surname, title, unit and institutional e-mail — received from the university system</td><td>When staff sign in</td></tr>
         <tr><td>Events</td><td>Event registration, ticket code, attendance time; survey answers and certificate number where applicable</td><td>When you register for an event</td></tr>
@@ -305,7 +310,7 @@
     <h2><span class="n">6</span>Retention periods</h2>
     <ul class="list">
       <li><b>Account data:</b> for as long as your account is open. When you delete your account, your e-mail, name, nickname, student number, department, profile photo and notification token are erased immediately and the remaining records are anonymised.</li>
-      <li><b>Sign-in code:</b> 5 minutes · <b>Session refresh token:</b> up to 30 days.</li>
+      <li><b>Session refresh token:</b> up to 30 days.</li>
       <li><b>In-app notifications:</b> 90 days.</li>
       <li><b>Requests, event registrations and certificates:</b> until the process is completed and for the period required by applicable legislation, after which they are deleted or anonymised.</li>
       <li><b>Access logs:</b> for the period required by Law No. 5651 and related legislation.</li>
@@ -331,12 +336,12 @@
     <h2><span class="n">8</span>How to apply and complain</h2>
     <p>You can apply in line with the Communiqué on the Procedures and Principles of Application to the Data Controller, with a petition stating your identity and your request:</p>
     <ul class="list">
-      <li>Signed in wet ink and addressed to Res. Asst. Hakkı Halil BABACAN, delivered by hand or by post to <b>Erzincan Binali Yıldırım University, Yalnızbağ Campus, 24002 Erzincan, Türkiye</b>,</li>
-      <li>With a secure electronic or mobile signature, or from the e-mail address registered in the app, to <b>hakki.babacan@erzincan.edu.tr</b>.</li>
+      <li>Signed in wet ink and addressed to the Personal Data Protection Coordination Office, Rectorate of Erzincan Binali Yıldırım University, delivered by hand or by post to <b>Yalnızbağ Campus, 24002 Erzincan, Türkiye</b>,</li>
+      <li>With a secure electronic or mobile signature, or from the e-mail address registered in the app, to <b>kvkkoor@ebyu.edu.tr</b>, or via registered e-mail (KEP) to <b>erzincanunv@hs02.kep.tr</b>.</li>
     </ul>
     <p>Applications are concluded free of charge within 30 days at the latest; if the process involves an additional cost, the fee schedule set by the Personal Data Protection Board may apply.</p>
     <p>If your application is rejected, you find the reply insufficient or you receive no reply in time, you may lodge a complaint with the Personal Data Protection Board under KVKK Article 14.</p>
-    <p class="note">You can delete your account and profile data yourself under <b>Profile › Settings</b> in the app.</p>
+    <p class="note">You can delete your account and profile data yourself under <b>Profile › Settings</b> in the app. For the full steps and what is deleted or kept: <a href="./hesap-silme/#en">Account and Data Deletion</a>.</p>
     <p class="meta">This is a translation. In case of any discrepancy, the Turkish text prevails.</p>
   </section>
 </article>
@@ -346,12 +351,12 @@
   <section class="card tldr">
     <h2>باختصار</h2>
     <ul>
-      <li>تسجّل الدخول ببريدك الجامعي؛ لا نطلب كلمة مرور ولا نحتفظ بها.</li>
-      <li>تُحفظ بياناتك على خوادم داخل تركيا فقط ولا تُنقل إلى الخارج.</li>
-      <li>لا نستخدم موقعك أو جهات اتصالك أو الميكروفون، ولا توجد إعلانات أو أدوات تتبّع من أطراف ثالثة.</li>
-      <li>صورة الملف الشخصي والاسم والرقم الجامعي اختيارية.</li>
-      <li>يمكنك حذف حسابك من داخل التطبيق في أي وقت.</li>
-      <li>يمكنك ممارسة حقوقك وفق المادة 11 من القانون في أي وقت.</li>
+      <li><span>تسجّل الدخول بكلمة مرور نظام الجامعة (OBS)؛ تُمرَّر إلى نظام المصادقة الجامعي <b>ولا نخزّنها</b>.</span></li>
+      <li><span>تُحفظ بياناتك على خوادم داخل تركيا فقط ولا تُنقل إلى الخارج.</span></li>
+      <li><span>لا نستخدم موقعك أو جهات اتصالك أو الميكروفون، ولا توجد إعلانات أو أدوات تتبّع من أطراف ثالثة.</span></li>
+      <li><span>صورة الملف الشخصي والاسم والرقم الجامعي اختيارية.</span></li>
+      <li><span>يمكنك حذف حسابك من داخل التطبيق في أي وقت.</span></li>
+      <li><span>يمكنك ممارسة حقوقك وفق المادة 11 من القانون في أي وقت.</span></li>
     </ul>
   </section>
 
@@ -365,10 +370,12 @@
 
   <section class="card" id="ar-1">
     <h2><span class="n">1</span>المسؤول عن البيانات</h2>
-    <p>وفقاً لقانون حماية البيانات الشخصية رقم 6698، فإن المسؤول عن البيانات الشخصية التي تُعالَج في تطبيق EBYÜ Kampüs هو الباحث المساعد <b><bdi>Hakkı Halil BABACAN</bdi></b>.</p>
+    <p>وفقاً لقانون حماية البيانات الشخصية رقم 6698، فإن المسؤول عن البيانات الشخصية التي تُعالَج في تطبيق EBYÜ Kampüs هو <b>رئاسة جامعة أرزنجان بينالي يلدريم</b>. وتتولّى <b>تنسيقية حماية البيانات الشخصية</b> إدارة العمليات المتعلقة بحماية البيانات.</p>
     <div class="contact">
-      <div><b>العنوان</b>جامعة أرزنجان بينالي يلدريم، حرم يالنيزباغ، 24002 أرزنجان، تركيا</div>
-      <div><b>البريد الإلكتروني</b><a href="mailto:hakki.babacan@erzincan.edu.tr" dir="ltr">hakki.babacan@erzincan.edu.tr</a></div>
+      <div><b>العنوان</b>رئاسة جامعة أرزنجان بينالي يلدريم، حرم يالنيزباغ، 24002 أرزنجان، تركيا</div>
+      <div><b>البريد الإلكتروني</b><a href="mailto:kvkkoor@ebyu.edu.tr" dir="ltr">kvkkoor@ebyu.edu.tr</a></div>
+      <div><b>البريد المسجّل (KEP)</b><bdi dir="ltr">erzincanunv@hs02.kep.tr</bdi></div>
+      <div><b>الهاتف</b><bdi dir="ltr">+90 446 226 66 66</bdi></div>
     </div>
   </section>
 
@@ -380,7 +387,7 @@
         <tr><td>الهوية والتواصل</td><td>البريد الإلكتروني الجامعي؛ الاسم الكامل والاسم المستعار اختيارياً</td><td>عند تسجيل الدخول وفي الملف الشخصي</td></tr>
         <tr><td>المعلومات الدراسية</td><td>الكلية والقسم والسنة الدراسية؛ الرقم الجامعي اختيارياً</td><td>عند تعبئة الملف الشخصي</td></tr>
         <tr><td>الصورة</td><td>صورة الملف الشخصي (اختيارية)</td><td>عند رفع صورة</td></tr>
-        <tr><td>أمن المعالجة</td><td>بصمة مشفّرة لرمز الدخول لمرة واحدة، ورموز الجلسة، ومعرّف الجهاز، والنظام وإصدار التطبيق، ورمز الإشعارات، وعنوان IP وسجلات الوصول</td><td>عند استخدام التطبيق</td></tr>
+        <tr><td>أمن المعالجة</td><td>رموز الجلسة، ومعرّف الجهاز، والنظام وإصدار التطبيق، ورمز الإشعارات، وعنوان IP وسجلات الوصول. <b>كلمة مرور نظام الجامعة لا تُخزَّن</b>؛ تُمرَّر فقط إلى نظام المصادقة الجامعي لحظة تسجيل الدخول.</td><td>عند استخدام التطبيق</td></tr>
         <tr><td>الطلبات والملاحظات</td><td>نوع الطلب أو الشكوى أو الاقتراح وموضوعه ونصه والوحدة التي اخترتها والرد</td><td>عند إرسال طلب</td></tr>
         <tr><td>بيانات الموظفين</td><td>الاسم واللقب واللقب الوظيفي ومكان العمل والبريد المؤسسي — تَرِد من نظام الجامعة</td><td>عند دخول الموظف</td></tr>
         <tr><td>الفعاليات</td><td>تسجيل الفعالية، ورمز التذكرة، ووقت الحضور؛ وإجابات الاستبيان ورقم شهادة المشاركة إن وُجدت</td><td>عند التسجيل في فعالية</td></tr>
@@ -430,7 +437,7 @@
     <h2><span class="n">6</span>مدة الحفظ</h2>
     <ul class="list">
       <li><b>بيانات الحساب:</b> طوال مدة بقاء الحساب مفتوحاً. عند حذف حسابك تُمحى فوراً بريدك الإلكتروني واسمك واسمك المستعار ورقمك الجامعي وقسمك وصورة ملفك الشخصي ورمز الإشعارات، وتُجعل السجلات المتبقية مجهولة الهوية.</li>
-      <li><b>رمز الدخول:</b> 5 دقائق · <b>رمز تجديد الجلسة:</b> 30 يوماً كحد أقصى.</li>
+      <li><b>رمز تجديد الجلسة:</b> 30 يوماً كحد أقصى.</li>
       <li><b>الإشعارات داخل التطبيق:</b> 90 يوماً.</li>
       <li><b>الطلبات وتسجيلات الفعاليات والشهادات:</b> حتى اكتمال الإجراء وطوال المدة التي تقتضيها التشريعات، ثم تُحذف أو تُجعل مجهولة الهوية.</li>
       <li><b>سجلات الوصول:</b> طوال المدة التي يقتضيها القانون رقم 5651 والتشريعات ذات الصلة.</li>
@@ -456,12 +463,12 @@
     <h2><span class="n">8</span>تقديم الطلب والشكوى</h2>
     <p>يمكنك تقديم طلبك وفق اللائحة الخاصة بإجراءات ومبادئ تقديم الطلبات إلى المسؤول عن البيانات، بعريضة تتضمن بيانات هويتك وطلبك:</p>
     <ul class="list">
-      <li>موقّعة بخط اليد وموجّهة إلى الباحث المساعد <bdi>Hakkı Halil BABACAN</bdi>، وتُسلَّم باليد أو بالبريد إلى العنوان: <b>جامعة أرزنجان بينالي يلدريم، حرم يالنيزباغ، 24002 أرزنجان، تركيا</b>،</li>
-      <li>بتوقيع إلكتروني آمن أو توقيع عبر الهاتف المحمول، أو من بريدك الإلكتروني المسجّل في التطبيق، إلى <b dir="ltr">hakki.babacan@erzincan.edu.tr</b>.</li>
+      <li>موقّعة بخط اليد وموجّهة إلى تنسيقية حماية البيانات الشخصية برئاسة جامعة أرزنجان بينالي يلدريم، وتُسلَّم باليد أو بالبريد إلى العنوان: <b>حرم يالنيزباغ، 24002 أرزنجان، تركيا</b>،</li>
+      <li>بتوقيع إلكتروني آمن أو توقيع عبر الهاتف المحمول، أو من بريدك الإلكتروني المسجّل في التطبيق، إلى <b dir="ltr">kvkkoor@ebyu.edu.tr</b>، أو عبر البريد المسجّل إلى <b dir="ltr">erzincanunv@hs02.kep.tr</b>.</li>
     </ul>
     <p>تُنجز الطلبات مجاناً خلال 30 يوماً كحد أقصى؛ وإذا تطلّب الإجراء تكلفة إضافية فقد تُطبّق التعرفة التي يحددها مجلس حماية البيانات الشخصية.</p>
     <p>إذا رُفض طلبك، أو وجدت الرد غير كافٍ، أو لم تتلقَّ رداً في المهلة المحددة، يحق لك تقديم شكوى إلى مجلس حماية البيانات الشخصية وفق المادة 14 من القانون.</p>
-    <p class="note">يمكنك حذف حسابك وبيانات ملفك الشخصي بنفسك من شاشة <b>الملف الشخصي › الإعدادات</b> في التطبيق.</p>
+    <p class="note">يمكنك حذف حسابك وبيانات ملفك الشخصي بنفسك من شاشة <b>الملف الشخصي › الإعدادات</b> في التطبيق. للاطلاع على الخطوات كاملة: <a href="./hesap-silme/#ar">حذف الحساب والبيانات</a>.</p>
     <p class="meta">هذه ترجمة، وفي حال وجود اختلاف يُعتمد النص التركي.</p>
   </section>
 </article>
@@ -469,9 +476,9 @@
 </main>
 
 <footer>
-  <div data-lang="tr">Son güncelleme: 11 Eylül 2026 · Sürüm 1.2</div>
-  <div data-lang="en" hidden>Last updated: 11 September 2026 · Version 1.2</div>
-  <div data-lang="ar" hidden>آخر تحديث: 11 سبتمبر 2026 · الإصدار 1.2</div>
+  <div data-lang="tr">Son güncelleme: 15 Eylül 2026 · Sürüm 1.3</div>
+  <div data-lang="en" hidden>Last updated: 15 September 2026 · Version 1.3</div>
+  <div data-lang="ar" hidden>آخر تحديث: 15 سبتمبر 2026 · الإصدار 1.3</div>
 </footer>
 
 <script>
